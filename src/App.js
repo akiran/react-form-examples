@@ -4,16 +4,22 @@ import Basic from './basic'
 import TextMask from './text-mask'
 import Login from './login'
 import ReduxLogin from './redux-login'
+import MultiStep from './multistep'
+import store from './store'
+import {Provider} from 'react-redux'
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <Basic />
-        <TextMask />
-        <Login />
-        <ReduxLogin />
-      </div>
+      <Provider store={store}>
+        <div className="container" style={{marginBottom: 100}}>
+          <Basic />
+          <TextMask />
+          <Login />
+          <ReduxLogin />
+          <MultiStep />
+        </div>
+      </Provider>
     );
   }
 }
