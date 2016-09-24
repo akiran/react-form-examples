@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Example from '../example'
 
 export default class LoginForm extends Component {
   constructor(props) {
@@ -45,8 +46,7 @@ export default class LoginForm extends Component {
   render() {
     const { username, password } = this.state
     return (
-      <div>
-        <h4>Simple login form</h4>
+      <Example title='Simple login form'>
         <form onSubmit={this.submitHandler}>
           <label>Username</label>
           <input 
@@ -65,7 +65,7 @@ export default class LoginForm extends Component {
           <input className='btn btn-primary' type='submit' value='Login' />
           <div className='error'>{this.state.error}</div>
         </form>
-      </div>
+      </Example>
     );
   }
 }

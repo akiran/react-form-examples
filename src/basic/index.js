@@ -4,17 +4,18 @@ import UncontrolledInput from './UncontrolledInput'
 import Checkbox from './Checkbox'
 import Select from './Select'
 import ReactSelect from './ReactSelect'
+import Example from '../example'
 
 export default class Basic extends Component {
   render() {
     return (
-      <div>
+      <Example title='Basic form elements'>
         <UncontrolledInput />
         <ControlledInput />
         <Checkbox />
         <Select />
         <ReactSelect />
-      </div>
+      </Example>
     );
   }
 }
